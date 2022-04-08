@@ -1,0 +1,103 @@
+.login-main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-heading {
+  width: 25%;
+  height: 460px;
+  margin-top: 5%;
+  padding: 48px 40px 36px;
+  font-size: 23px;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+}
+
+.font {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.login-fields {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.para {
+  font-size: 15px;
+  color: gray;
+  line-height: 4.3;
+}
+
+#login-para {
+  font-size: medium;
+  margin-top: -6%;
+  color: blue;
+}
+
+.button1 {
+  color: blue;
+  padding-left: 3px;
+}
+
+.create-button {
+  margin-left: -17px;
+  color: blue;
+}
+
+.next-button {
+  background-color: blue;
+  color: white;
+  margin-left: 48%;
+  padding-inline-end: 6%;
+  padding-inline-start: 7%;
+}
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+  .login-heading {
+    width: 86%;
+    padding: 16px;
+    height: fit-content;
+    margin-top: 25%;
+  }
+
+  .next-button {
+    margin-left: 45%;
+  }
+
+  .para {
+    font-size: 13px;
+    line-height: 4.3;
+  }
+}
+
+@media only screen and (min-device-width: 820px) and (max-device-width: 1180px) and (-webkit-min-device-pixel-ratio: 1) {
+
+  .login-heading {
+    width: 46%;
+    margin-top: 51%;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+
+  .login-heading {
+    width: 46%;
+    margin-top: 44%;
+  }
+}
+
+@media only screen and (min-device-width: 540px) and (max-device-width: 720px) and (-webkit-min-device-pixel-ratio: 1) {
+
+  .login-heading {
+    font-size: 23px;
+  }
+}
+
+
+
+

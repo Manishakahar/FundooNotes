@@ -1,12 +1,35 @@
-<p>login works!</p>
 <div class="login-main" fxLayout="row" fxLayoutAlign="center center">
-    <mat-card
-      fxFlex="33"
-      fxFlex.xs="70"
-      fxFlex.md="40"
-      fxFlex.sm="60"
-      class="card"
-      >
+  <div class="login-heading">
 
-      
+    <p class="font">
+      <span style="color: #4285f4;">F</span>
+      <span style="color: red;">u</span>
+      <span style="color:#f4b400;">n</span>
+      <span style="color: #4285f4;">d</span>
+      <span style="color: #0f9d58;">o</span>
+      <span style="color: red;">o</span>
+    </p>
+    <h1 class="font">Sign in</h1>
+    <h3 class="font">Use your Fundoo Account</h3>
+    <div class="login-fields">
+      <mat-form-field [style.fontSize.px]="14" appearance="outline"
+        style="width: 100%; padding-top: 5%; padding-left: -1%;">
+        <mat-label>Email or phone</mat-label>
+        <input matInput class="name-ip" name="email" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{
+          getErrorMessageForEmail()
+        }}</mat-error>
+      </mat-form-field>
+      <div style="margin-top: -19px;">
+        <button mat-button class="button1" routerLink="/forget-password">Forget email?</button>
+    </div>
+    </div>
+    <p class="para"> Not your computer? Use Guest mode to sign in privately.</p>
+    <p id="login-para">Learn more</p>
+
+    <div class="button-section2" fxLayoutAlign="space-between" style="padding-top: 8%;">
+      <button mat-button class="create-button"routerLink="/register" >Create account</button>
+      <button mat-raised-button class="next-button" type="submit">Next</button>
+  </div>
+  </div>
 </div>

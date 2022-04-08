@@ -1,0 +1,47 @@
+.forgot-main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forgot-heading {
+    width: 26%;
+    height: 497px;
+    margin-top: 5%;
+    padding: 48px 40px 36px;
+    font-size: 23px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+}
+
+.font {
+    text-align: center;
+    margin-top: 16px;
+    line-height: 1.1;
+}
+
+.forgot-fields {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.next-button {
+    background-color: blue;
+    color: white;
+    margin-left: 496%;
+    padding-inline-end: 40%;
+    padding-left: 29px;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 677px) and (-webkit-min-device-pixel-ratio: 1) {
+    .forgot-heading {
+        width: 65%;
+        margin-top: 1%;
+        padding-right: 43%;
+        font-size: 23px;
+        border : none;
+    }
+}
