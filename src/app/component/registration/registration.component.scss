@@ -1,0 +1,90 @@
+.main-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // padding: 48px 40px 36px;
+    padding-top: 4%;
+
+}
+
+.container {
+    width: 45%;
+    height: 70vh;
+    padding: 3%;
+    font-size: 23px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+}
+
+.reg-form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.fields {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.btn{
+    background-color: #4285f4;
+    color: white;
+    margin: 8px;
+    width: 83px;
+    margin-top: 25px;
+}
+
+
+.logo {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#lable {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    padding-right: 5%;
+    letter-spacing: inherit;
+    margin-top: -1rem;
+    font-size: 12px;
+    color: gray;
+}
+
+#lable-pass {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    padding-right: 5%;
+    margin-top: -1rem;
+    letter-spacing: inherit;
+    font-size: 12px;
+    color: gray;
+
+}
+
+.example-section {
+    font-size: 14px;
+    color: black;
+}
+
+#reg-sign {
+    margin-right: 44%;
+    padding-top: 13%;
+    font-size: 17px;
+    color: blue;
+}
+
+#logo-font {
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 30px;
+
+}
