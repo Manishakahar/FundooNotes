@@ -7,9 +7,8 @@
 
 .login-heading {
   width: 25%;
-  height: 460px;
   margin-top: 5%;
-  padding: 48px 40px 36px;
+  padding: 39px 40px 36px;
   font-size: 23px;
   border-radius: 10px;
   border: 1px solid lightgray;
@@ -25,23 +24,25 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
 }
 
 .para {
   font-size: 15px;
   color: gray;
-  line-height: 4.3;
+  padding-top: 2%;
 }
 
 #login-para {
   font-size: medium;
-  margin-top: -6%;
+  // margin-top: -6%;
   color: blue;
 }
 
 .button1 {
   color: blue;
   padding-left: 3px;
+  padding-top: 11%;
 }
 
 .create-button {
@@ -97,7 +98,3 @@
     font-size: 23px;
   }
 }
-
-
-
-

@@ -16,14 +16,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
-import { ForgotPaswordComponent } from './component/forgot-pasword/forgot-pasword.component';
+import { ForgetPaswordComponent } from './component/forget-passwored/forget-passwored.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
     LoginComponent,
-    ForgotPaswordComponent
+    ForgetPaswordComponent
+  
   ],
   imports: [
     BrowserModule,
@@ -38,8 +40,8 @@ import { ForgotPaswordComponent } from './component/forgot-pasword/forgot-paswor
     MatIconModule,
     MatInputModule,
     MatCheckboxModule,
-    MatButtonModule
-
+    MatButtonModule,
+ 
   ],
   providers: [],
   bootstrap: [AppComponent]

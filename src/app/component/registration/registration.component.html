@@ -9,48 +9,53 @@
         <br>
         <h1 style="margin-top: 12px;"> Create your Google Account </h1>
         <h3 style="margin-top: -4px;">to continue to Gmail </h3>
-        <div class="reg-form">
-            <div class="fields">
-                <mat-form-field [style.fontSize.px]="14" appearance="outline">
-                    <mat-label>First name</mat-label>
-                    <input matInput class="name-ip">
-                </mat-form-field>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="reg-form">
+                <div class="fields">
+                    <mat-form-field [style.fontSize.px]="14" appearance="outline">
+                        <mat-label>First name</mat-label>
+                        <input matInput class="name-ip" formControlName="firstName">
+                    <mat-error> First name is required </mat-error>
+                    </mat-form-field>
 
-                <mat-form-field [style.fontSize.px]="14" appearance="outline">
-                    <mat-label>Last name</mat-label>
-                    <input matInput class="name-ip">
-                </mat-form-field>
+                    <mat-form-field [style.fontSize.px]="14" appearance="outline">
+                        <mat-label>Last name</mat-label>
+                        <input matInput class="name-ip" formControlName="lastName">
+                        <mat-error > Last name is required </mat-error> 
+                    </mat-form-field>
 
-                <mat-form-field [style.fontSize.px]="14" appearance="outline" style="width: 100%;">
-                    <mat-label>UserName</mat-label>
-                    <input matInput class="name-ip">
-                </mat-form-field>
-                <h5 id="lable">You can use letters, numbers & periods</h5>
+                    <mat-form-field [style.fontSize.px]="14" appearance="outline" style="width: 100%;">
+                        <mat-label>UserName</mat-label>
+                    <input matInput class="name-ip" formControlName="email">
+                    <mat-error> UserName is required </mat-error>
+                    </mat-form-field>
+                    <h5 class="lable">You can use letters, numbers & periods</h5>
 
-                <mat-form-field [style.fontSize.px]="14" appearance="outline">
-                    <mat-label>Password</mat-label>
-                    <input matInput class="name-ip">
-                </mat-form-field>
+                    <mat-form-field [style.fontSize.px]="14" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput  type="Password" formControlName="password">
+                        <mat-error> Password is required </mat-error>
+                    </mat-form-field>
 
-                <mat-form-field [style.fontSize.px]="14" appearance="outline">
-                    <mat-label>Confirm</mat-label>
-                    <input matInput class="name-ip">
-                </mat-form-field>
-                <h5 id="lable-pass">Use 8 or more characters with a mix of letters, numbers & <br> symbols</h5>
+                    <mat-form-field [style.fontSize.px]="14" appearance="outline">
+                        <mat-label>Confirm Password</mat-label>
+                        <input matInput type="Password" formControlName="confirmPassword">
+                    <mat-error> Confirm Password is required </mat-error>
+                    </mat-form-field>
+                    <h5 class="lable-pass">Use 8 or more characters with a mix of letters, numbers & <br> symbols</h5>
 
-                <section class="example-section">
-                    <mat-checkbox class="example-margin">Show password</mat-checkbox>
-                </section>
-                
-                <span id="reg-sign">Sign in instead</span>
-                <button mat-raised-button color="Next" class="btn">Next</button>
+                    <section class="example-section">
+                        <mat-checkbox class="example-margin">Show password</mat-checkbox>
+                    </section>
+
+                    <button mat-button class="reg-sign" routerLink="/login" >Sign in instead</button>
+                    <button mat-raised-button color="Next" class="btn">Next</button>
+                </div>
+                <div class="logo">
+                    <img src="assets/account.png" alt="" style=" margin-top: -64%; ">
+                    <h3 id="logo-font">One account. All of Fundoo working for you</h3>
+                </div>
             </div>
-            <div class="logo">
-                <img src="assets/account.png" alt="" style=" margin-top: -64%; ">
-                 <h3 id="logo-font">One account. All of Fundoo working for you</h3> 
-            </div>
-      
-        </div>
-
+        </form>
     </div>
 </div>

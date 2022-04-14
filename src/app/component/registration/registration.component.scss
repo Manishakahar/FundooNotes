@@ -3,14 +3,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // padding: 48px 40px 36px;
-    padding-top: 4%;
+    padding-top: 3%;
 
 }
 
 .container {
     width: 45%;
-    height: 70vh;
     padding: 3%;
     font-size: 23px;
     border-radius: 10px;
@@ -30,14 +28,13 @@
     flex-wrap: wrap;
 }
 
-.btn{
-    background-color: #4285f4;
+.btn {
+    background-color: blue;
     color: white;
-    margin: 8px;
-    width: 83px;
-    margin-top: 25px;
+    margin: 1px;
+    width: 71px;
+    margin-top: 29px;
 }
-
 
 .logo {
     width: 40%;
@@ -47,27 +44,18 @@
     flex-direction: column;
 }
 
-#lable {
+.mat-form-field-appearance-outline .mat-form-field-infix {
+     padding: none !important; 
+ }
+ 
+.lable {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column-reverse;
     padding-right: 5%;
     letter-spacing: inherit;
-    margin-top: -1rem;
     font-size: 12px;
     color: gray;
-}
-
-#lable-pass {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column-reverse;
-    padding-right: 5%;
-    margin-top: -1rem;
-    letter-spacing: inherit;
-    font-size: 12px;
-    color: gray;
-
 }
 
 .example-section {
@@ -75,9 +63,9 @@
     color: black;
 }
 
-#reg-sign {
+.reg-sign {
     margin-right: 44%;
-    padding-top: 13%;
+    padding-top: 6%;
     font-size: 17px;
     color: blue;
 }
@@ -87,4 +75,75 @@
     font-weight: 300;
     padding-left: 30px;
 
+}
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 851px) and (-webkit-min-device-pixel-ratio: 1) {
+    .container {
+        width: 86%;
+        height: fit-content;
+        padding: 3%;
+        font-size: 23px;
+        border: none;
+    }
+
+    .logo {
+        display: none;
+
+    }
+
+    .fields {
+        width: 333px;
+    }
+
+    .mat-form-field {
+        display: inline-block;
+        position: relative;
+        text-align: left;
+        width: 333px;
+    }
+
+    .mat-form-field-wrapper {
+        position: relative;
+        width: 333px;
+    }
+
+    .main-content {
+        margin: -4px;
+    }
+
+    .btn {
+        margin-top: -23px;
+        margin-left: 193px;
+    }
+
+    #reg-sign {
+        padding-top: 5%;
+    }
+
+}
+
+
+@media only screen and (min-device-width: 820px) and (max-device-width: 1180px) and (-webkit-min-device-pixel-ratio: 1) {
+    .container {
+        width: 69%;
+        height: 55vh;
+        padding: 3%;
+        margin-top: 210px;
+        font-size: 23px;
+        border-radius: 10px;
+        border: 1px solid lightgray;
+    }
+
+    .main-conten {
+        margin: 19px;
+        margin-top: 227px;
+    }
+
+    .fields {
+        width: 100%;
+    }
+
+    .media {
+        width: 44%;
+    }
 }

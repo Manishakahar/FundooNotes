@@ -1,0 +1,30 @@
+<div class="forget-main" fxLayout="row" fxLayoutAlign="center center">
+    <div class="forget-heading">
+        <p class="font">
+            <span style="color: #4285f4;">F</span>
+            <span style="color: red;">u</span>
+            <span style="color:#f4b400;">n</span>
+            <span style="color: #4285f4;">d</span>
+            <span style="color: #0f9d58;">o</span>
+            <span style="color: red;">o</span>
+        </p>
+        <h1 class="font">Find your email</h1>
+        <h3 class="font">Enter your phone number or recovery email</h3>
+
+        <form [formGroup]="forgetForm" (ngSubmit)="onSubmit()"> 
+            <div class="forget-fields">
+                 <mat-form-field [style.fontSize.px]="14" appearance="outline"  style="width: 100%; padding-top: 6%; padding-left: -1%;">
+                    <mat-label>Phone number or email</mat-label>
+                     <input matInput class="name-ip" formControlName="email"> 
+                    <mat-error> Phone number or email is required </mat-error>
+                </mat-form-field> 
+
+                <div>
+                    <button mat-raised-button class="next-button" (click)="onSubmit()">Next</button>
+                </div>
+            </div>
+         
+        </form> 
+    </div>
+</div>
+

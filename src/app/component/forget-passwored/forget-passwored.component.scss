@@ -1,13 +1,13 @@
-.forgot-main {
+.forget-main {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.forgot-heading {
-    width: 26%;
-    height: 497px;
+.forget-heading {
+    width: 25%;
+    height: 60vh;
     margin-top: 5%;
     padding: 48px 40px 36px;
     font-size: 23px;
@@ -21,27 +21,32 @@
     line-height: 1.1;
 }
 
-.forgot-fields {
+.forget-fields {
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding-top: 6%;
+    padding-left: -1%
 }
+
+ .mat-form-field-appearance-outline .mat-form-field-infix {
+     padding: none !important; 
+ }
 
 .next-button {
     background-color: blue;
     color: white;
-    margin-left: 496%;
-    padding-inline-end: 40%;
-    padding-left: 29px;
+    margin-left: 490%;
+    
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 677px) and (-webkit-min-device-pixel-ratio: 1) {
-    .forgot-heading {
+    .forget-heading {
         width: 65%;
         margin-top: 1%;
         padding-right: 43%;
         font-size: 23px;
-        border : none;
+        border: none;
     }
 }
