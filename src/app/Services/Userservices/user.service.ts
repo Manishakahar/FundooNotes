@@ -8,9 +8,9 @@ import { HttpHeaders } from '@angular/common/http';
 
 export class UserService {
 
-  constructor(private httpService: HttpService) { }
+  constructor(private httpService: HttpService) { } // obj of httpService
 
-  registration(reqdata: any) {
+  registration(reqdata: any) { 
     console.log(reqdata);
 
     let header = {

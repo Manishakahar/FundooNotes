@@ -1,0 +1,25 @@
+
+.notemain{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top:5%;
+}
+
+.input{
+    width: 83%;
+    padding-top: 3%;
+    border: none;
+    font-size: 115%;
+}
+
+.addnote{
+    width: 50%;
+    padding: 9px;
+}
+
+.main-note-div {
+    // min-height: 90vh;
+    width: 100%;
+}

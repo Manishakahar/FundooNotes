@@ -1,0 +1,106 @@
+.container {
+    width: 100%;
+    background-color: white;
+    color: beige;
+}
+
+.mat-toolbar-single-row {
+    background-color: white;
+    color: black;
+}
+
+.mat-drawer-side {
+    border:none;
+}
+
+.title {
+    padding-left: 4%;
+    font-size: 111%;
+}
+
+.header{
+    border-bottom: 1px solid grey;
+    width:100%;
+}
+
+.logo {
+    padding-left: 40%;
+}
+
+.img {
+    padding-left: 3%;
+}
+
+.search {
+
+    margin-left: 70px;
+    border-radius: 10px;
+    width: 720px;
+    background-color: #e5e9e7a8;
+    height: 45px;
+    box-shadow: 10px 5px 5px rgb(228, 222, 222);
+
+}
+
+.searchIcon {
+    border-radius: 8px;
+    width: 700px;
+    margin-left: 5%;
+    outline: none;
+    border: 1px solid #f1f3f4;
+    background-color: #f1f3f4;
+}
+
+.side-div {
+    width: 20%;
+}
+
+.search-icon {
+    margin-top: 10px;
+}
+
+.search-icon,
+.searchInput {
+    border: 0px;
+    background-color:transparent;
+    font-size: 80%;
+}   
+
+
+
+.icons-texts {
+    padding: 12px;
+}
+
+
+.sidenav-container {
+    flex: 1;
+    border: white;
+    //  border-width: 1px;
+    // border-style: groove;
+    background-color: white;
+    height: 515px;
+}
+
+.side-div {
+    width: 100%;
+}
+
+.body-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.routepages{
+    width:80%;
+}
+
+.nav-slider {
+    width: 20%;
+}
+
+.Notes-icons {
+    margin-top: -40px;
+    margin-left: 22px;
+}

@@ -6,7 +6,11 @@ import { RegistrationComponent } from './component/registration/registration.com
 import { LoginComponent } from './component/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import {MatListModule} from '@angular/material/list';
 
+
+
+import {MatToolbarModule} from '@angular/material/toolbar';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -17,6 +21,13 @@ import { MatInputModule } from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
 import { ForgetPaswordComponent } from './component/forget-passwored/forget-passwored.component';
+import { DashboardComponent } from './component/dashboard/dashboard.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { CreateNoteComponent } from './component/create-note/create-note.component';
+import { IconsComponent } from './component/icons/icons.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+
+
 
 
 @NgModule({
@@ -24,8 +35,11 @@ import { ForgetPaswordComponent } from './component/forget-passwored/forget-pass
     AppComponent,
     RegistrationComponent,
     LoginComponent,
-    ForgetPaswordComponent
-  
+    ForgetPaswordComponent,
+    DashboardComponent,
+    CreateNoteComponent,
+    IconsComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -41,7 +55,10 @@ import { ForgetPaswordComponent } from './component/forget-passwored/forget-pass
     MatInputModule,
     MatCheckboxModule,
     MatButtonModule,
- 
+    MatToolbarModule,
+    MatListModule,
+    MatSidenavModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

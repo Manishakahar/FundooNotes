@@ -1,0 +1,86 @@
+<div class="container" [class.example-is-mobile]="mobileQuery.matches">
+  <div class="header">
+    <div>
+      <mat-toolbar>
+        <button mat-icon-button class="example-icon" (click)="snav.toggle()">
+          <mat-icon>menu</mat-icon>
+          <img src="../../../assets/keep_2020q4_48dp.png" class="logo">
+        </button>
+        <span class="title">Fundoo</span>
+        <span class="example-spacer"></span>
+
+        <div class="searchIcon" #search (click)="SearchProp(search,'white')">
+          <button mat-icon-button class="search-icon">
+            <mat-icon matTooltip="Search">search</mat-icon>
+          </button>
+          <input class="searchInput" placeholder="Search">
+        </div>
+
+        <!-- <div style="display: flex;flex-direction: row;">
+          <mat-card
+              style="margin-left: 100px;border-radius: 10px 10px 10px 10px;border-width: 1px 1px 1px 6px;height: 20px; display: flex;width: 600px;flex-shrink: 300px;">
+              <img src="../../../assets/search_black_24dp.svg"
+                  style="opacity: 0.54; width: 23px ;height: 23px;">
+              <input
+                  style="border: none; width: 600px;overflow: hidden;font-family: 16px Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif; font-size: 16px;"
+                  matInput type="text" [(ngModel)]="value">
+                  <mat-icon>close</mat-icon>
+              </button>
+          </mat-card>
+      </div> -->
+
+        <div class="img">
+          <img src="./../../../assets/refresh_black_24dp.svg" alt="refresh_black_24dp" style="padding-left: 99%;">
+          <img style="margin-left: 25px;" src="../../../assets/view_agenda_black_24dp.svg" alt="">
+          <img style="margin-left: 20px;" src="../../../assets/settings_black_24dp.svg" alt="">
+          <img src="../../../assets/apps_black_24dp.svg" alt="" style="padding-left: 50%;">
+          <img style="margin-left: 10%;" src="../../../assets/account_circle_black_24dp.svg" alt="">
+        </div>
+      </mat-toolbar>
+    </div>
+  </div>
+  </div>
+  <div class="body-container">
+  <div class="nav-slider">
+    <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+      <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+        fixedTopGap="56" class="side-div">
+        <mat-nav-list>
+          <a class="Notes" mat-list-item routerLink="./createnote">
+            <mat-icon>
+              <img src="../../../assets/Dashboard/lightbulb_black_24dp.svg">
+            </mat-icon>
+            <mat-list-item>Notes</mat-list-item>
+          </a>
+          <a class="Notes" mat-list-item routerLink="./note">
+            <mat-icon>
+              <img src="../../../assets/Dashboard/Reminders_black_24dp.svg">
+            </mat-icon>
+            <mat-list-item>Reminders</mat-list-item>
+          </a>
+          <a class="Notes" mat-list-item routerLink="./note">
+            <mat-icon>
+              <img src="../../../assets/Dashboard/edit_black_24dp.svg">
+            </mat-icon>
+            <mat-list-item>Edit Labels</mat-list-item>
+          </a>
+          <a class="Notes" mat-list-item routerLink="./archive">
+            <mat-icon>
+              <img width="85%" height="85%" style="cursor: pointer"
+                src="../../../assets/Dashboard/archive_black_24dp.svg">
+            </mat-icon>
+            <mat-list-item>Archive</mat-list-item>
+          </a>
+          <a class="Notes" mat-list-item routerLink="./trash">
+            <mat-icon>delete_outline</mat-icon>
+            <mat-list-item>Trash</mat-list-item>
+          </a>
+        </mat-nav-list>
+      </mat-sidenav>
+    </mat-sidenav-container>
+    
+    </div>
+    <div class="routepages">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
