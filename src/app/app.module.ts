@@ -26,6 +26,10 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { CreateNoteComponent } from './component/create-note/create-note.component';
 import { IconsComponent } from './component/icons/icons.component';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { DisplaynoteComponent } from './component/displaynote/displaynote.component';
+import { GetAllNotesComponent } from './component/get-all-notes/get-all-notes.component';
+import { UpdatenoteComponent } from './component/updatenote/updatenote.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -39,6 +43,9 @@ import {MatExpansionModule} from '@angular/material/expansion';
     DashboardComponent,
     CreateNoteComponent,
     IconsComponent,
+    DisplaynoteComponent,
+    GetAllNotesComponent,
+    UpdatenoteComponent,
 
   ],
   imports: [
@@ -59,6 +66,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatListModule,
     MatSidenavModule,
     MatExpansionModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

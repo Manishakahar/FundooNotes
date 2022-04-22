@@ -12,14 +12,27 @@
     padding-top: 3%;
     border: none;
     font-size: 115%;
+    outline: none;
 }
 
 .addnote{
-    width: 50%;
+    width: 52%;
     padding: 9px;
 }
 
 .main-note-div {
     // min-height: 90vh;
     width: 100%;
+    min-height: 22vh;
 }
+
+.notecontent{
+    width: 100%;
+    border: none;
+}
+
+.iconstab{
+    display: flex;
+    justify-content: space-between;
+}
+

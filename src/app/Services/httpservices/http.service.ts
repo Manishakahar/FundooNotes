@@ -19,5 +19,7 @@ export class HttpService {
 
      return this.HttpClient.get(this.baseUrl+url,token && httpOptions) 
   }
+
+  
 }
           

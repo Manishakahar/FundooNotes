@@ -7,30 +7,50 @@ import { HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class NoteService {
+  token: any;
+  id: any;
 
-  constructor(private httpService: HttpService) { }
+  constructor(private httpService: HttpService) {
+    this.token=localStorage.getItem('token')
+  }
 
-  dashboard(reqdata: any) {
-    console.log(reqdata);
+  createNote(reqdata: any) {
+    this.token=localStorage.getItem('token')
+     console.log("inside note service",reqdata);
 
-    let header = {
+    let headers = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',
-        
+        'Authorization':   this.token
       })
     }
-    return this.httpService.postService('/notes/addNotes', reqdata, false, header)
+    return this.httpService.postService('/notes/addNotes', reqdata, true, headers)
+  }
+    
+
+  getNoteList(){
+    this.token=localStorage.getItem('token')
+    console.log("inside getnote service");
+    let headers = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization' : this.token
+      })
+    }
+    return this.httpService.getService('/notes/getNotesList', true, headers)
   }
 
 
-  createNote(reqdata: any) {
-    console.log(reqdata);
+   updateNote(reqdata: any, id: any) {
+    this.token=localStorage.getItem('token')
+     console.log("inside note service",reqdata);
 
-    let header = {
+    let headers = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',
+        'Authorization':   this.token
       })
     }
-    return this.httpService.getService('/notes/getNotesList', reqdata,false,header)
+    return this.httpService.postService('/notes/updateNotes'+id,reqdata, true, headers)
   }
 }

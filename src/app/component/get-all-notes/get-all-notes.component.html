@@ -1,0 +1,6 @@
+<div fxLayoutAlign="center none" class="main-note-div">
+    <div fxLayout="column" class="sub-note-div">
+        <app-create-note (getNoteList)="getAllNotes()"> </app-create-note>
+        <app-displaynote [notesArray]="notes" (getNoteList)="getAllNotes()"></app-displaynote>
+    </div>
+</div>

@@ -10,24 +10,38 @@ import { Router } from '@angular/router'
 export class DashboardComponent implements OnInit {
 
   userLogin: boolean = false;
-  email:any;
-  firstName:any;
-  lastName:any;
-  
-  constructor(private el: ElementRef,media: MediaMatcher, private router: Router) {
+  email: any;
+  firstName: any;
+  lastName: any;
+
+  constructor(private el: ElementRef, media: MediaMatcher, private router: Router) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
   }
-  
-  SearchProp(el:HTMLElement,color:string){
-    el.style.backgroundColor=color;
-  }
-  
 
-  
+  SearchProp(el: HTMLElement, color: string) {
+    el.style.backgroundColor = color;
+  }
   ngOnInit(): void {
+    this.email = localStorage.getItem('userEmail');
+    this.firstName = localStorage.getItem('firstName');
+    this.lastName = localStorage.getItem('lastName');
 
   }
   mobileQuery: MediaQueryList;
+  fillerNav: string[] = [
+    'Notes',
+    'Reminders',
+    'Edit Labels',
+    'Archive',
+    'Trash',
+  ];
 
+  imageClick() {
+    this.userLogin = !this.userLogin;
+  }
+  logout() {
+    localStorage.removeItem('token');
+    this.router.navigate(['login']);
+  }
 
 }

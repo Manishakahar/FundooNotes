@@ -40,7 +40,7 @@ export class UserService {
     let header = {
       Headers: new HttpHeaders({
         'content-type': 'application/json',
-      //  'Authorization': 'token'
+        'Authorization': 'token'
       })
     }
     return this.httpService.postService('/user/reset', reqdata, false, header)
