@@ -1,20 +1,26 @@
+<div fxLayout="row" fxLayoutAlign="space-around end">
 
-
-<div fxLayout="row"   fxLayoutAlign="space-around end">
-
-    <button mat-icon-button  matTooltip="Alert" >
+	<button mat-icon-button matTooltip="Alert">
 		<img class="icons" src="./../../../assets/icons/add_alert_black_24dp (1).svg" alt="Alert">
 	</button>
-    <button mat-icon-button  matTooltip="Add Person">
+	<button mat-icon-button matTooltip="Add Person">
 		<img class="icons" src="./../../../assets/icons/person_add_alt_black_24dp.svg" alt="person">
 	</button>
-    <button mat-icon-button  matTooltip="palette">
+	<button mat-icon-button matTooltip="palette">
 		<img class="icons" src="./../../../assets/icons/palette_black_24dp.svg" alt="palette">
 	</button>
-    <button mat-icon-button  matTooltip="Add image">
+	<button mat-icon-button matTooltip="Add image">
 		<img class="icons" src="./../../../assets/icons/insert_photo_black_24dp.svg" alt="image">
 	</button>
-    <button mat-icon-button  matTooltip="Archive">
-		<img class="icons" src="./../../../assets/icons/archive_black_24dp.svg" alt="archive">
+	 <button mat-icon-button matTooltip="Archive">
+		 <img class="icons"  style="cursor: pointer"
+		 (click)="Onarchive()" src="./../../../assets/icons/archive_black_24dp.svg" alt="archive"> 
+ </button> 
+	
+	<button mat-icon-button [matMenuTriggerFor]="menu" matTooltip="More">
+		<mat-icon s>more_vert</mat-icon>
+		<mat-menu #menu="matMenu">
+			<button mat-menu-item (click)="deletenote()">Delete note</button>
+		</mat-menu>
 	</button>
 </div>

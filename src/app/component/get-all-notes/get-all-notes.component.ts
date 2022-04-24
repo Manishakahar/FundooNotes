@@ -11,8 +11,6 @@ export class GetAllNotesComponent implements OnInit {
 
   constructor(private httpGetAllNote: NoteService) { }
   list: any = [];
-  // noteList: any = [{title:'note',discription:'value',id:'1'},{title:'note',discription:'value',id:'1'},{title:'note',discription:'value',id:'1'}];
-
   notes: any;
   noteList: any = [];
 
@@ -33,6 +31,7 @@ export class GetAllNotesComponent implements OnInit {
     )
   }
 }
+
 
 
 

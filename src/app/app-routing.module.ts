@@ -9,12 +9,11 @@ import { DisplaynoteComponent } from './component/displaynote/displaynote.compon
 import { GetAllNotesComponent } from './component/get-all-notes/get-all-notes.component';
 import { UpdatenoteComponent } from './component/updatenote/updatenote.component';
 
-
 const routes: Routes = [
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
   { path: 'forget', component: ForgetPaswordComponent },
-  { path: 'update', component: UpdatenoteComponent},
+   { path: 'update', component: UpdatenoteComponent},
   { path: 'dashboard', component: DashboardComponent,
   children: [
     {
@@ -25,7 +24,8 @@ const routes: Routes = [
     {
       path: "notes",
       component: GetAllNotesComponent,
-    },]},
+    },
+  ]},
 ];
 
 @NgModule({

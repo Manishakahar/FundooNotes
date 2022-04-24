@@ -4,6 +4,7 @@
         <h1 mat-dialog-title>
             <input class="add-note-input" matInput placeholder="Title" [ngModel]="noteTitle"
             [(ngModel)]="noteTitle" />
+            <img src="../../../assets/icons/push_pin_black_24dp.svg" alt="" class="image">
         </h1>
         <div mat-dialog-content>
             <textarea #desc class="add-note-input" matInput placeholder="Take a note...." [(ngModel)]="noteDescription"
@@ -15,6 +16,6 @@
             </div>
                 <span><button  mat-button mat-dialog-close class="closebutton" (click)="Onclose()">Close</button></span>
         </div>
-        </mat-card>
+        </mat-card>        
     </div>
 </div>

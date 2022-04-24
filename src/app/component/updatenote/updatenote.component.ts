@@ -26,18 +26,16 @@ export class UpdatenoteComponent implements OnInit {
     this.noteDescription = this.data.noteid.description;
     this.id = this.data.noteid.id;
   }
-    Onclose() {
+  Onclose() {
     let reqdata = {
       title: this.noteTitle,
       description: this.noteDescription,
       noteId: this.id,
     }
 
-    this.httpPost.updateNote(reqdata, this.id).subscribe((respone) => {
-      console.log('update response: ', respone);
-      this.noteTitle = ''
-      this.noteDescription = ''
-      this.id.emit(respone)
+    this.httpPost.updateNote(reqdata).subscribe((respone) => {
+      console.log('update response: ', respone)
+
     })
   }
 }

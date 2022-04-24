@@ -1,19 +1,20 @@
-<div class="sub-main">
+ <div class="sub-main">
     <div class="note-card-dive" *ngFor="let note of notesArray">
-        <mat-card class="card-data" (click)="openDialog(note)">
-            <mat-card-content>
+        <mat-card class="card-data">
+            <mat-card-content (click)="openDialog(note)">
                 <div fxLayout="column" class="take-note">
                     <div class="title-div">
                         <input class="add-note-input" [(ngModel)]="note.title" matInput placeholder="Title" />
-                            <img src="../../../assets/icons/push_pin_black_24dp.svg" alt="" class="img">
+                        <img src="../../../assets/icons/push_pin_black_24dp.svg" alt="" class="img">
                     </div>
                     <div class="title-div">
-                        <textarea class="add-note-input" [(ngModel)]="note.description"matInput placeholder="Take a note....">
+                        <textarea class="add-note-input" [(ngModel)]="note.description" matInput
+                            placeholder="Take a note....">
                         </textarea>
                     </div>
                 </div>
             </mat-card-content>
-            <app-icons></app-icons>
+            <app-icons [noteCard]='note'></app-icons>
         </mat-card>
     </div>
-</div>
+</div> 

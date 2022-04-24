@@ -30,6 +30,8 @@ import { DisplaynoteComponent } from './component/displaynote/displaynote.compon
 import { GetAllNotesComponent } from './component/get-all-notes/get-all-notes.component';
 import { UpdatenoteComponent } from './component/updatenote/updatenote.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatMenuModule} from '@angular/material/menu';
+
 
 
 
@@ -46,6 +48,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     DisplaynoteComponent,
     GetAllNotesComponent,
     UpdatenoteComponent,
+    
 
   ],
   imports: [
@@ -67,6 +70,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatSidenavModule,
     MatExpansionModule,
     MatDialogModule,
+    MatMenuModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

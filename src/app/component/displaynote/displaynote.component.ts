@@ -39,5 +39,5 @@ export class DisplaynoteComponent implements OnInit {
         this.getNoteList.emit();
       });
     }
-    
+
 }
