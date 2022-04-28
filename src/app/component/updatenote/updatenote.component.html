@@ -7,12 +7,12 @@
             <img src="../../../assets/icons/push_pin_black_24dp.svg" alt="" class="image">
         </h1>
         <div mat-dialog-content>
-            <textarea #desc class="add-note-input" matInput placeholder="Take a note...." [(ngModel)]="noteDescription"
+            <textarea #desc class="add-note-input" matInput placeholder="Take a note...." [(ngModel)]="noteDescription" 
             [(ngModel)]="noteDescription"></textarea>
         </div>
         <div style="display: flex;">
             <div style="width: 80%;">
-                <app-icons></app-icons>
+                <app-icons ></app-icons>
             </div>
                 <span><button  mat-button mat-dialog-close class="closebutton" (click)="Onclose()">Close</button></span>
         </div>

@@ -10,13 +10,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
+  users='1';
   loginForm: FormGroup | any;
   submitted = false;
 
   constructor(private formBuilder: FormBuilder, private user: UserService ,private router: Router) { }
 
   ngOnInit(): void {
+    
+     localStorage.setItem('SeesionUser',this.users)  
+
 
     this.loginForm = this.formBuilder.group({
 
@@ -41,7 +44,6 @@ export class LoginComponent implements OnInit {
         console.log(response);
         localStorage.setItem("token",response.id)
         this.router.navigateByUrl('/dashboard')
-       // router .navigetbyurl through dashboard
       });
     }
   }

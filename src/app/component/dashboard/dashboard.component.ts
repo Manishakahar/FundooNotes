@@ -39,9 +39,9 @@ export class DashboardComponent implements OnInit {
   imageClick() {
     this.userLogin = !this.userLogin;
   }
-  logout() {
-    localStorage.removeItem('token');
-    this.router.navigate(['login']);
+  logout() {    
+    localStorage.removeItem('token')
+    this.router.navigateByUrl('login');
   }
 
 }

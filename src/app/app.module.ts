@@ -6,35 +6,34 @@ import { RegistrationComponent } from './component/registration/registration.com
 import { LoginComponent } from './component/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import {MatListModule} from '@angular/material/list';
+import { MatListModule } from '@angular/material/list';
 
 
 
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatNativeDateModule} from '@angular/material/core';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {HttpClientModule} from '@angular/common/http';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatButtonModule} from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatButtonModule } from '@angular/material/button';
 import { ForgetPaswordComponent } from './component/forget-passwored/forget-passwored.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { CreateNoteComponent } from './component/create-note/create-note.component';
 import { IconsComponent } from './component/icons/icons.component';
-import {MatExpansionModule} from '@angular/material/expansion';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { DisplaynoteComponent } from './component/displaynote/displaynote.component';
 import { GetAllNotesComponent } from './component/get-all-notes/get-all-notes.component';
 import { UpdatenoteComponent } from './component/updatenote/updatenote.component';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatMenuModule} from '@angular/material/menu';
-
-
-
-
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatMenuModule } from '@angular/material/menu';
+import { TrashComponent } from './component/trash/trash.component';
+import { ArchiveComponent } from './component/archive/archive.component';
+import { AuthguradServiceService } from './authgurad-service.service';
 
 @NgModule({
   declarations: [
@@ -48,7 +47,9 @@ import {MatMenuModule} from '@angular/material/menu';
     DisplaynoteComponent,
     GetAllNotesComponent,
     UpdatenoteComponent,
-    
+    TrashComponent,
+    ArchiveComponent,
+
 
   ],
   imports: [
@@ -73,7 +74,9 @@ import {MatMenuModule} from '@angular/material/menu';
     MatMenuModule
 
   ],
-  providers: [],
+  providers: [
+    AuthguradServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

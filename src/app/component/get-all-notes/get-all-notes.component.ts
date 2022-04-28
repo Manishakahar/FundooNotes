@@ -19,16 +19,40 @@ export class GetAllNotesComponent implements OnInit {
   }
   getAllNotes() {    // Api integartion for api notes 
     this.httpGetAllNote.getNoteList().subscribe(
-      (resp) => {
-        this.list = resp;
-        this.noteList = this.list.data.data;
-        this.notes = this.noteList
+      (resp: any) => {
+
+
+        this.notes = resp.data.data;
         console.log(resp);
+        this.noteList = this.notes.filter((data: any) => {
+          console.log(data.isDeleted)
+          return data.isDeleted === false && data.isArchived === false;
+        })
       },
       (error) => {
-        console.log('Get Note Error', error);
-      }
-    )
+        console.log('Get Note Error', error)
+      });
+  }
+
+  autoRefresh(data: any) {   // this for auoto Refresh 
+    console.log("refresh", data);
+    this.getAllNotes();
+  }
+  colourchanged(e: any) {
+    console.log(e);
+    this.getAllNotes();
+  }
+  update(e: any) {
+    console.log(e);
+    this.getAllNotes();
+  }
+  trash(data: any) {
+    console.log("refresh", data);
+    this.getAllNotes();
+  }
+  archive(data: any) {
+    console.log("refresh", data);
+    this.getAllNotes();
   }
 }
 

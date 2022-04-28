@@ -1,10 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { NoteService } from 'src/app/Services/noteServices/note.service';
-import {
-  MatDialog,
-  MatDialogRef,
-  MAT_DIALOG_DATA,
-} from '@angular/material/dialog';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA,} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-updatenote',
@@ -32,10 +28,8 @@ export class UpdatenoteComponent implements OnInit {
       description: this.noteDescription,
       noteId: this.id,
     }
-
     this.httpPost.updateNote(reqdata).subscribe((respone) => {
       console.log('update response: ', respone)
-
     })
   }
 }

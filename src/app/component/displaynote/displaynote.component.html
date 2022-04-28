@@ -1,20 +1,20 @@
  <div class="sub-main">
     <div class="note-card-dive" *ngFor="let note of notesArray">
-        <mat-card class="card-data">
+        <mat-card class="card-data" [style.background]="note.color">
             <mat-card-content (click)="openDialog(note)">
                 <div fxLayout="column" class="take-note">
                     <div class="title-div">
-                        <input class="add-note-input" [(ngModel)]="note.title" matInput placeholder="Title" />
+                        <input class="add-note-input"  [style.background]="note.color" [(ngModel)]="note.title" matInput placeholder="Title" />
                         <img src="../../../assets/icons/push_pin_black_24dp.svg" alt="" class="img">
                     </div>
                     <div class="title-div">
-                        <textarea class="add-note-input" [(ngModel)]="note.description" matInput
+                        <textarea class="add-note-input" [(ngModel)]="note.description"  [style.background]="note.color"matInput
                             placeholder="Take a note....">
                         </textarea>
                     </div>
                 </div>
             </mat-card-content>
-            <app-icons [noteCard]='note'></app-icons>
+            <app-icons [noteCard]='note' (archiveNoteToRefresh)="archive($event)" (trashNoteToRefresh)="trash($event)" (changeColorOfNote)="changeColor($event)"></app-icons>
         </mat-card>
     </div>
 </div> 

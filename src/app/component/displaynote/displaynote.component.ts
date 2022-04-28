@@ -14,6 +14,11 @@ export class DisplaynoteComponent implements OnInit {
   constructor(public dialog: MatDialog) { }
 
   @Input() notesArray:any= [];
+  @Output() changeColorOfNote = new EventEmitter<any>();
+  @Output() updateNoteToRefresh = new EventEmitter<any>();
+  @Output() trashNoteToRefresh = new EventEmitter<any>();
+  @Output() archiveNoteToRefresh = new EventEmitter<any>();
+
   @Output() getNoteList = new EventEmitter();
 
   list:any=[];
@@ -39,5 +44,20 @@ export class DisplaynoteComponent implements OnInit {
         this.getNoteList.emit();
       });
     }
+    changeColor(e: any) {
+      console.log(e);
+      this.changeColorOfNote.emit("colour")
+  
+  
+    }
+    trash(data: any) {
+      console.log(data);
+      this.trashNoteToRefresh.emit("hello")
+    }
+    archive(data: any) {
+      console.log(data);
+      this.archiveNoteToRefresh.emit("hello")
+    }
+  
 
 }
